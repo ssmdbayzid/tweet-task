@@ -40,7 +40,7 @@ const TestimonialCard = ({customerReviewData}) => {
 
         className="mySwiper !pb-10"
       >
-        {customerReviewData && customerReviewData.map((customer, index) => (
+        {customerReviewData && customerReviewData.map((customer:any, index:any) => (
           <SwiperSlide key={index} className="flex justify-center items-center">
 
             <div className="relative p-1 rounded-xl w-full">

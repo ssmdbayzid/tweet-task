@@ -72,10 +72,6 @@ const PopularRestaurent = () => {
                         <CiDiscount1 size={20} />
                         <p>{restaurent?.discount} Off</p>
                       </div>
-                      <div className=" w-[35px] h-[35px] bg-white flex items-center justify-center rounded-full">
-                        {restaurent?.isFavourite ? <FaRegHeart size={22} className="text-primary" /> :
-                          <FaHeart className="text-primary" />}
-                      </div>
                     </div>
                     <div className=" absolute bottom-3 right-5 bg-white flex items-center justify-center py-1 px-3 border gap-1 border-gray/50 rounded-full">
                       <IoIosStar className='text-primary' />
