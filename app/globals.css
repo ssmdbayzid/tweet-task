@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+
+@theme {
+  /* color  */
+  --color-primary: #ED6923;
+  --color-secondary: #333333;
+  --color-gray: #767676;
+  --color-textcolor: #767676;
+
+  --color-footer-txtcolor: #A5A5A5;
+  --color-mailbg: #181D21;
+
+  /* Custom Font */
+  --font-lobsterTwo: "Lobster Two", sans-serif;
+  --font-primaryFont: "Poppins", sans-serif;
+  --font-heroTitle: "Rancho", sans-serif;
+}
+
+@layer base {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-primaryFont);    
+    background: linear-gradient(100.61deg, rgba(253, 240, 233, 0.25) 1.4%, rgba(237, 105, 35, 0.125) 116.17%);
+
+  }
+
+  .swiper-button-disabled{
+    color: var(--color-gray) !important;
+    border: transparent !important;    
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-primary border border-primary rounded-[8px] px-5 py-2;
+  }
+
+  .swiper-pagination-bullets{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet{
+    width: 12px !important;
+    height: 12px !important;
+    background: var(--color-white) !important;
+    border: 2px solid red !important;
+  }
+  .swiper-pagination-bullet-active{
+    width: 17px !important;
+    height: 17px !important;
+    background: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
+  }
+}
+
+
+@layer utilities {
+  .cardShadow {
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.05);
+  }
+  .glassBg{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 24px 24px 64px 0px rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px)
+  }
+  .container{    
+    @apply max-w-[1400px] w-full mx-auto
+  }
+  .heroBg {
+  background: linear-gradient(239.29deg, rgba(253, 237, 229, 0.25) 20.27%, rgba(254, 140, 79, 0.1) 50%, rgba(254, 140, 79, 0.25) 78.71%);
+  }
+  .section{
+    @apply py-[75px];
+  }
+
+  .linkBtn {
+    @apply px-[46px] py-[16px] text-primary border border-primary font-bold rounded-lg
+  }
+
+  .title{        
+    @apply text-[40px] font-bold
+   
+  }
+
+  .swiperNavButton{
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16);
+    background: rgba(255, 255, 255, 0.45);
+    @apply cursor-pointer rounded-full w-12 h-12  flex items-center justify-center text-secondary border border-gray/50
+  }
+  
+
+}
