@@ -7,8 +7,12 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules'; // Autoplay needs to be here
 
+interface StarRatingProps {
+  rating: number; // Expect 'rating' to be a number
+  maxRating?: number; // 'maxRating' is optional and defaults to 5, also a number
+}
 
-const StarRating = ({ rating, maxRating = 5 }) => {
+const StarRating = ({ rating, maxRating = 5 }: StarRatingProps) => {
     return (
       <div className="flex space-x-1 bg-primary rounded-md p-2.5 text-white">
         {Array(maxRating).fill(null).map((_, index) => (
@@ -21,7 +25,7 @@ const StarRating = ({ rating, maxRating = 5 }) => {
     );
   };
 
-const TestimonialCard = ({customerReviewData}) => {
+const TestimonialCard = ({customerReviewData}: {customerReviewData: any}) => {
   return (
     <div className="w-full max-w-4xl mx-auto py-8">
       <Swiper
