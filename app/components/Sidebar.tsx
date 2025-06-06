@@ -45,7 +45,7 @@ const menuData = [
 
 const Sidebar = () => {
   return (
-    <div className="flex rounded-xl w-64 flex-col bg-white shadow-lg">
+    <div className="flex mb-[180px] rounded-xl w-64 flex-col bg-white shadow-lg">
     <div className="h-32 bg-gradient-to-r from-orange-400 to-orange-600"></div>
 
     <div className="z-10  px-6 py-4">
