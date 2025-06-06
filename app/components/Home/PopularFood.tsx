@@ -105,7 +105,7 @@ const PopularFood = () => {
                           </div>
                           <div className="flex items-center gap-10">
                             <span className='flex items-center gap-1'><IoMdBicycle />
-                              {product?.deliveryFee}</span>
+                              {product?.deliveryCharge}</span>
                           </div>
                         </div>
                       </div>
